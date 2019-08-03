@@ -11,7 +11,9 @@ curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desk
 
 # Procedure
 
-1. Fork your salt-project - this exercise uses https://github.com/eligundry/salt.eligundry.com
+1. Fork your salt-project.
+   
+   For the demo I used a random, but excellent, salt-project at: https://github.com/eligundry/salt.eligundry.com and renamed repo as "salt-desktop-overlay-demo" to avoid confusion.
 
 2. Overlay salt-destkop manually
 ```
