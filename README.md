@@ -15,8 +15,8 @@ curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desk
 
 2. Overlay salt-destkop manually
 ```
- git clone https://github.com/noelmcloughlin/salt.eligundry.com
- cd salt.eligundry.com/
+ git clone https://github.com/noelmcloughlin/salt.eligundry.com salt-desktop-overlay-demo
+ cd salt-desktop-overlay-demo/
  mv pillar configs/
  mv salt profiles
  mkdir scripts/
