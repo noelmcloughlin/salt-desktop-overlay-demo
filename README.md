@@ -26,26 +26,23 @@ curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desk
  curl -o scripts/installer.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desktop/master/installer.sh
 ```
 
-3. Personalize your project:
-```
-    vi ./scripts/installer.sh
-
-    ... etc ...
-    solution['entity']="eligundry"
-    solution['repo']="salt.eligundry.com"
-    solution['alias']="eligundry"
-    solution['targets']="linux-desktop|linux|mac|media-center|server|shared|thinkpad"
-```
-
-4. Commit and push.
-
-5. Overlay salt-desktop
+3. Overlay salt-desktop
 ```
 sudo bash ./scripts/overlay-salt.sh
 ```
 
-
 # Use salt-desktop
+
+The overlay script copied your states/pillars here:
+```
+    vi ./scripts/installer.sh
+```
+    ### YOUR STUFF HERE ###
+    your['states']="${SALTFS}/community/your/file_roots"
+    your['pillars']="${SALTFS}/community/your/pillar_roots"
+```
+
+So you can run your own states (demo)-
 ```
 sudo salter.sh -i 'media-center' -u eligundry
 ```
