@@ -1,7 +1,8 @@
-#------------------------------------------
 # Demonstration: salt-desktop integration
-#------------------------------------------
+
 status: immature
+
+# Procedure
 
 1. Fork your salt-project - this exercise uses https://github.com/eligundry/salt.eligundry.com
 
@@ -31,13 +32,17 @@ status: immature
 
 4. Commit and push.
 
-5. Now ensure salt-desktop is integrated into your system
+5. Overlay salt-desktop
 ```
-curl -o salter.sh https://raw.githubusercontent.com/noelmcloughlin/salt.eligundry.com/master/scripts/installer.sh && sudo bash salter.sh -i bootstrap && sudo bash salter.sh -i salt `
+sudo bash ./scripts/overlay-salt.sh
 ```
 
-You can now use salt-desktop to run you states-
+# Install salt-desktop per README
+```
+curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desktop/master/installer.sh && sudo bash salter.sh -i bootstrap && sudo bash salter.sh -i salt `
+```
 
+# Use salt-desktotp per README
 ```
 sudo salter.sh -i 'media-center' -u eligundry
 ```
