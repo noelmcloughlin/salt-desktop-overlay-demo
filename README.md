@@ -2,13 +2,6 @@
 
 status: immature
 
-# Salt
-
-Bootstrap salt if necessary.
-```
-curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/installer.sh && sudo bash salter.sh -i bootstrap && sudo bash salter.sh -i salter `
-```
-
 # Procedure
 
 1. Fork your salt-project. For this demo I used a random, but excellent, salt-project at: https://github.com/eligundry/salt.eligundry.com and renamed to "salter-overlay-demo" to avoid confusion.
