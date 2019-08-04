@@ -14,7 +14,10 @@ status: immature
  mv salt profiles
  mkdir scripts/
  curl -o scripts/overlay-salt.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/contrib/overlay-salt.sh
- curl -o scripts/installer.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/installer.sh
+```
+Optionally if you have bigger plans ;-)
+```
+ curl -o scripts/salter.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/salter.sh
 ```
 
 3. Overlay salt-desktop
