@@ -1,4 +1,4 @@
-# Demonstration: salt-desktop integration
+# Demonstration: salter integration
 
 status: immature
 
@@ -6,22 +6,22 @@ status: immature
 
 Bootstrap salt if necessary.
 ```
-curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desktop/master/installer.sh && sudo bash salter.sh -i bootstrap && sudo bash salter.sh -i salter `
+curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/installer.sh && sudo bash salter.sh -i bootstrap && sudo bash salter.sh -i salter `
 ```
 
 # Procedure
 
-1. Fork your salt-project. For this demo I used a random, but excellent, salt-project at: https://github.com/eligundry/salt.eligundry.com and renamed to "salt-desktop-overlay-demo" to avoid confusion.
+1. Fork your salt-project. For this demo I used a random, but excellent, salt-project at: https://github.com/eligundry/salt.eligundry.com and renamed to "salter-overlay-demo" to avoid confusion.
 
 2. Make your repo compatible with salter
 ```
- git clone https://github.com/noelmcloughlin/salt.eligundry.com salt-desktop-overlay-demo
- cd salt-desktop-overlay-demo/
+ git clone https://github.com/eligundry/salt.eligundry.com salter-overlay-demo
+ cd salter-overlay-demo/
  mv pillar configs/
  mv salt profiles
  mkdir scripts/
- curl -o scripts/overlay-salt.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desktop/master/contrib/overlay-salt.sh
- curl -o scripts/installer.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desktop/master/installer.sh
+ curl -o scripts/overlay-salt.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/contrib/overlay-salt.sh
+ curl -o scripts/installer.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/installer.sh
 ```
 
 3. Overlay salt-desktop
@@ -33,7 +33,7 @@ sudo bash ./scripts/overlay-salt.sh
 
 Explanation: The overlay script copied your states/pillars to special location:
 ```
-    vi ./scripts/installer.sh
+    vi ./scripts/salter.sh
 
     ..etc..
     ### YOUR STUFF HERE ###
@@ -48,4 +48,4 @@ So your states are now available to salter (demo)-
 
 References:
  1. salt.eligundry.com: https://github.com/noelmcloughlin/salt.eligundry.com
- 2. salt-desktop guide: https://github.com/saltstack-formulas/salt-desktop/blob/master/README.rst#integration-recommendation
+ 2. salter: https://github.com/saltstack-formulas/salter/blob/master/README.rst#integration-recommendation
