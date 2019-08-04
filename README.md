@@ -15,7 +15,7 @@ curl -o salter.sh https://raw.githubusercontent.com/saltstack-formulas/salt-desk
    
    For the demo I used a random, but excellent, salt-project at: https://github.com/eligundry/salt.eligundry.com and renamed repo as "salt-desktop-overlay-demo" to avoid confusion.
 
-2. Overlay salt-destkop manually
+2. Make your repo compatible with salter
 ```
  git clone https://github.com/noelmcloughlin/salt.eligundry.com salt-desktop-overlay-demo
  cd salt-desktop-overlay-demo/
@@ -36,16 +36,15 @@ sudo bash ./scripts/overlay-salt.sh
 The overlay script copied your states/pillars here:
 ```
     vi ./scripts/installer.sh
-```
+
+    ..etc..
     ### YOUR STUFF HERE ###
     your['states']="${SALTFS}/community/your/file_roots"
     your['pillars']="${SALTFS}/community/your/pillar_roots"
 ```
 
-So you can run your own states (demo)-
-```
-sudo salter.sh -i 'media-center' -u eligundry
-```
+Now your states are available (demo)-
+` sudo salter.sh -i 'media-center' -u eligundry `
 
 
 References:
