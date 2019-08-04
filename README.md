@@ -24,6 +24,12 @@ sudo bash ./scripts/overlay-salt.sh
 
 # Use salt-desktop
 
+Your states/pillars are now available to salter (demo)-
+
+` sudo salter.sh -i 'media-center' -u eligundry `
+
+
+# How it works
 Explanation: The overlay script copied your states/pillars to special location:
 ```
     vi ./scripts/salter.sh
@@ -34,11 +40,6 @@ Explanation: The overlay script copied your states/pillars to special location:
     your['pillars']="${SALTFS}/community/your/pillar_roots"
 ```
 
-So your states are now available to salter (demo)-
-
-` sudo salter.sh -i 'media-center' -u eligundry `
-
-
-References:
+# References:
  1. salt.eligundry.com: https://github.com/noelmcloughlin/salt.eligundry.com
  2. salter: https://github.com/saltstack-formulas/salter/blob/master/README.rst#integration-recommendation
