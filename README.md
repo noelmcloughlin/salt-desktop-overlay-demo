@@ -20,7 +20,7 @@ status: immature
  curl -o scripts/salter.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/salter.sh
 ```
 
-3. Overlay salt-desktop
+3. Overlay salt-desktop (note: will also execute  salt-bootstrap - comment out that line if desired)
 ```
 sudo bash ./scripts/overlay-salt.sh
 ```
