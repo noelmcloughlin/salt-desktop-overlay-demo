@@ -33,7 +33,7 @@ sudo bash ./scripts/overlay-salt.sh
 
 # Use salt-desktop
 
-The overlay script copied your states/pillars here:
+Explanation: The overlay script copied your states/pillars to special location:
 ```
     vi ./scripts/installer.sh
 
@@ -43,7 +43,8 @@ The overlay script copied your states/pillars here:
     your['pillars']="${SALTFS}/community/your/pillar_roots"
 ```
 
-Now your states are available (demo)-
+So your states are now available to salter (demo)-
+
 ` sudo salter.sh -i 'media-center' -u eligundry `
 
 
