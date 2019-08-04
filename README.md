@@ -15,7 +15,7 @@ status: immature
  mkdir scripts/
  curl -o scripts/overlay-salt.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/contrib/overlay-salt.sh
 ```
-Optionally if you have bigger plans ;-)
+  Optionally this too (if you have bigger plans ;-)
 ```
  curl -o scripts/salter.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/salter.sh
 ```
