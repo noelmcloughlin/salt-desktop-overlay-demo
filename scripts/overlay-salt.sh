@@ -17,13 +17,12 @@
 # Original work from: https://github.com/saltstack-formulas/salter
 #----------------------------------------------------------------
 
-# Optionally overlay your salt integrations onto salter
-# Your repo may contain
+# Overlay salter onto your repo/filesystem, assuming this structure
+#
 #   - ./profiles directory (copied to salt file_roots)
 #   - ./configs directory (copied to salt pillar_roots)
 #   - ./formulas directory (copied to salt file_roots); optional
 #   - ./scripts/salter.sh (a customized installer); optional
-# This script merges salter into your local repo/directory
 #----------------------------------------------------------------
 git config user.email "not@important.com"                                   ##keep git happy
 git config user.name "not important"
