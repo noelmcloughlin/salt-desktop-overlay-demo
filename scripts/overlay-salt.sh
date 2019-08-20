@@ -50,13 +50,15 @@ fi
 [ -f contrib/salter.sh ] && mv contrib/salter.sh salter.sh && chmod +x salter.sh
 
 # macos needs brew installed
-USER=$( stat -f "%Su" /dev/console )
-[ "`uname`" = "Darwin" ] && ([ -x /usr/local/bin/brew ] | su - ${USER} -c '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"')
+if [ "`uname`" = "Darwin" ]; then
+    USER=$( stat -f "%Su" /dev/console )
+    [ -x /usr/local/bin/brew ] | su - ${USER} -c '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+fi
 
 # bash version must be modern
 RC=0 && declare -A detect_modern_bash_version 2>/dev/null || RC=$?
 (( RC > 0 )) && echo "[info] your bash version is really old - upgrade to a modern version"
-(( RC > 0 )) && [ "`uname`" = "Darwin" ] &&  echo "[info] installing newer bash version ..." && brew install bash
+(( RC > 0 )) && [ "`uname`" = "Darwin" ] &&  echo "[info] installing newer bash version ..." && su - ${USER} -c 'brew install bash'
 
 ## salt-bootstrap plus additions
 RC=0 && ./salter.sh -i bootstrap || exit 1
