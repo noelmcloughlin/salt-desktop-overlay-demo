@@ -30,7 +30,7 @@ sudo bash ./scripts/overlay-salt.sh
 
 Your states/pillars are now available to salter (demo)-
 
-` sudo salter.sh -i 'media-center' -u eligundry `
+` sudo salter add 'media-center' -u eligundry `
 
 
 # References:
