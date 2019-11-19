@@ -16,12 +16,13 @@ status: immature
  curl -o scripts/overlay-salt.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/contrib/overlay-salt.sh
 ```
 
-  Optionally this too (if you have bigger plans ;-)
+3. Preparations on CentOS7
+
 ```
- curl -o scripts/salter.sh https://raw.githubusercontent.com/saltstack-formulas/salter/master/salter.sh
+sudo yum install centos-release-scl -y && sudo yum-config-manager --enable rhel-server-rhscl-7-rpms && sudo yum install rh-git29 -y && sudo scl enable rh-git29 bash
 ```
 
-3. Overlay salt-desktop (note: will also execute  salt-bootstrap - comment out that line if desired)
+4. Overlay salt-desktop (note: will also execute  salt-bootstrap - comment out that line if desired)
 ```
 sudo bash ./scripts/overlay-salt.sh
 ```
